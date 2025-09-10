@@ -1,0 +1,11 @@
+-iwithprefixbefore/ch592
+-iwithprefixbefore/ch592/EVT
+-iwithprefixbefore/ch592/EVT/EXAM
+-iwithprefixbefore/ch592/EVT/EXAM/SRC
+-iwithprefixbefore/ch592/EVT/EXAM/SRC/StdPeriphDriver
+-iwithprefixbefore/ch592/EVT/EXAM/SRC/StdPeriphDriver/inc
+-iwithprefixbefore/ch592/EVT/EXAM/SRC/LIB
+-iwithprefixbefore/ch592/EVT/EXAM/SRC/RVMSIS
+-iwithprefixbefore/ch592/EVT/EXAM/SRC/HAL
+-iwithprefixbefore/ch592/EVT/EXAM/SRC/HAL/include
+

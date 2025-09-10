@@ -1,0 +1,56 @@
+/*
+  Copyright (c) 2015 Arduino LLC.  All right reserved.
+
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or (at your option) any later version.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  See the GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+
+#include "Arduino.h"
+#include "CH59x_common.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+unsigned long millis()
+{
+  // SYS_GetSysTickCnt 以60MHz为时基，60MHz时钟下每个tick为1/60000000秒，转换为毫秒需除以60000
+  return SYS_GetSysTickCnt() / 60000;
+}
+
+unsigned long micros() {
+  // SYS_GetSysTickCnt 以60MHz为时基，60MHz时钟下每个tick为1/60000000秒，转换为微秒需除以60
+  return SYS_GetSysTickCnt() / 60;
+}
+
+void delay(unsigned long ms)
+{
+    DelayMs(ms);
+}
+
+void delayMicroseconds(unsigned int us)
+{
+  DelayUs(us);
+}
+
+void init( void )
+{
+  SetSysClock( CLK_SOURCE_PLL_60MHz );
+  SysTick_Config(SysTick_LOAD_RELOAD_Msk);// 配置SysTick并打开中断
+  PFIC_DisableIRQ(SysTick_IRQn);
+}
+
+#ifdef __cplusplus
+}
+#endif
