@@ -10,3 +10,32 @@ The CH592F is a 32-bit RISC microcontroller integrated with BLE wireless communi
 ### Features
 
 参考代码来源 https://github.com/ElectronicCats/arduino-wch58x
+
+Features List
+
+
+[x] Serial
+
+[x] digitalWrite
+
+[x] digitalRead
+
+[x] analogRead
+
+[x] analogWrite
+
+[] SPI
+
+[x] I2C
+
+[] USB
+
+[] Touch
+
+[] BLE Peripheral
+
+[] BLE Host
+
+[] LowPower
+
+[x] upload
