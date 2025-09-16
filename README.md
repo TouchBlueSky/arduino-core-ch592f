@@ -85,10 +85,13 @@ PB0 对应 16，依次递增
 串口2 PA7 PA6
 串口3 PA5 PA4
 
-下载步骤为：
+下载步骤（需要管理员权限）为：
 1、点击上传，会出现正在上传百分之0
 2、按住PB22按键插入usb
 3、等待下载完成
+
+如果提示如下则说明arduino软件没用管理员权限打开
+WCHISPTool_CH57x-59x.exe: The requested operation requires elevation.
 
 开发计划
    本来想移植个功能比较全的给大家使用，但目前由于蓝牙问题一直没好思路搞定，就半成品搁在这里了
